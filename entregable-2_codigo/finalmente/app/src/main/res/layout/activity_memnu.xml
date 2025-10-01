@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6FAFF">
+
+    <!-- Emergency Now button -->
+    <Button
+        android:id="@+id/btnEmergencyCall"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Emergency Now"
+        android:textColor="#FFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:backgroundTint="#EF4444"
+        android:fontFamily="sans-serif-medium"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:layout_alignParentTop="true" />
+
+    <!-- Search Box -->
+    <EditText
+        android:id="@+id/searchHelp"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@id/btnEmergencyCall"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Search for help..."
+        android:background="#FFF"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:fontFamily="sans-serif" />
+
+    <!-- Four Emergency Buttons -->
+    <GridLayout
+        android:id="@+id/gridMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchHelp"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:alignmentMode="alignMargins"
+        android:useDefaultMargins="true">
+
+        <Button
+            android:id="@+id/btnCPR"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:text="RCP"
+            android:textSize="16sp"
+            android:backgroundTint="#B7D8FB"
+            android:textColor="#EF4444"
+            android:fontFamily="sans-serif-medium"
+            android:elevation="2dp"
+            android:layout_margin="12dp" />
+
+        <Button
+            android:id="@+id/btnChoking"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:text="Atragantamiento"
+            android:textSize="13sp"
+            android:backgroundTint="#B7D8FB"
+            android:textColor="#EF4444"
+            android:fontFamily="sans-serif-medium"
+            android:elevation="2dp"
+            android:layout_margin="12dp" />
+
+        <Button
+            android:id="@+id/btnBleeding"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:text="Hemorragia"
+            android:textSize="16sp"
+            android:backgroundTint="#B7D8FB"
+            android:textColor="#EF4444"
+            android:fontFamily="sans-serif-medium"
+            android:elevation="2dp"
+            android:layout_margin="12dp" />
+
+        <Button
+            android:id="@+id/btnBurns"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:text="Quemadura"
+            android:textSize="16sp"
+            android:backgroundTint="#B7D8FB"
+            android:textColor="#EF4444"
+            android:fontFamily="sans-serif-medium"
+            android:elevation="2dp"
+            android:layout_margin="12dp" />
+    </GridLayout>
+
+    <!-- Bottom menu bar -->
+    <LinearLayout
+        android:id="@+id/bottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFF"
+        android:elevation="12dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/nav_home"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textColor="#517CF4"
+            android:textSize="15sp"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif-medium" />
+
+        <Button
+            android:id="@+id/nav_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textColor="#517CF4"
+            android:textSize="15sp"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif-medium" />
+
+        <Button
+            android:id="@+id/nav_favorites"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Favorites"
+            android:textColor="#517CF4"
+            android:textSize="15sp"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif-medium" />
+
+        <Button
+            android:id="@+id/nav_profile"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="#517CF4"
+            android:textSize="15sp"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+</RelativeLayout>
