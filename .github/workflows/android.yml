@@ -29,6 +29,7 @@ jobs:
       with:
         name: app-debug.apk
         path: app/build/outputs/apk/debug/app-debug.apk
+
   firebase-test-lab:
     needs: build
     runs-on: ubuntu-latest
@@ -37,6 +38,9 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: app-debug.apk
+        path: .
+    - name: Move APK to Root
+      run: mv app-debug.apk/app-debug.apk ./
     - name: Display structure of downloaded files
       run: ls -R
     - id: 'auth'
@@ -49,5 +53,4 @@ jobs:
       uses: 'google-github-actions/setup-gcloud@v2'
     - name: 'Running tests in Firebase Test Lab'
       if: ${{ hashFiles('app-debug.apk') != '' }}
-      # run: 'gcloud info'
       run: 'gcloud firebase test android run --app app-debug.apk --type robo --device model=MediumPhone.arm,version=30,locale=en,orientation=portrait'
