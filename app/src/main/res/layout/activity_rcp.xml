@@ -1,0 +1,506 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_revert"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="RCP"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/btnInfo"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_info_details"
+            android:contentDescription="Info" />
+    </LinearLayout>
+
+    <!-- Contenido principal con peso-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <!-- Imagen principal RCP1 -->
+        <ImageView
+            android:id="@+id/imageMain"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/rcp"
+            android:layout_margin="16dp"
+            android:background="#D9EDEA"
+            android:clipToOutline="true"
+            android:contentDescription="Imagen rcp" />
+
+        <!-- Pasos list dentro de ScrollView para que use espacio necesario y sea deslizable -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:padding="8dp"
+                android:layout_marginHorizontal="16dp">
+
+                <!-- Paso 1 -->
+                <LinearLayout
+                    android:id="@+id/paso1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/step1Icon"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@android:drawable/ic_menu_help"
+                            app:tint="#4BBDB2"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="Icono paso 1" />
+
+                        <TextView
+                            android:id="@+id/step1Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1. Verifica que la persona no responde y no respira normalmente."
+                            android:textSize="16sp"
+                            android:textColor="#000000"
+                            android:layout_toEndOf="@id/step1Icon"
+                            android:layout_marginStart="12dp"
+                            android:layout_alignParentTop="true"/>
+
+                        <ImageView
+                            android:id="@+id/step1Arrow"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_media_play"
+                            app:tint="#777777"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="Flecha paso 1"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/step1Detalle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Confirma visualmente y con tacto que no hay respuesta ni respiración normal para iniciar acciones."
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        android:paddingTop="8dp" />
+                </LinearLayout>
+
+                <!-- Paso 2 -->
+                <LinearLayout
+                    android:id="@+id/paso2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/step2Icon"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@android:drawable/ic_menu_call"
+                            app:tint="#4BBDB2"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="Icono paso 2" />
+
+                        <TextView
+                            android:id="@+id/step2Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2. Llama o pide que llamen al número de emergencias (911)."
+                            android:textSize="16sp"
+                            android:textColor="#000000"
+                            android:layout_toEndOf="@id/step2Icon"
+                            android:layout_marginStart="12dp"
+                            android:layout_alignParentTop="true"/>
+
+                        <ImageView
+                            android:id="@+id/step2Arrow"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_media_play"
+                            app:tint="#777777"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="Flecha paso 2"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/step2Detalle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pide ayuda urgente al marcar el número de emergencia local, informa la situación."
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        android:paddingTop="8dp" />
+                </LinearLayout>
+
+                <!-- Paso 3 -->
+                <LinearLayout
+                    android:id="@+id/paso3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/step3Icon"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@android:drawable/ic_menu_compass"
+                            app:tint="#4BBDB2"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="Icono paso 3" />
+
+                        <TextView
+                            android:id="@+id/step3Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3. Inicia compresiones torácicas."
+                            android:textSize="16sp"
+                            android:textColor="#000000"
+                            android:layout_toEndOf="@id/step3Icon"
+                            android:layout_marginStart="12dp"
+                            android:layout_alignParentTop="true"/>
+
+                        <ImageView
+                            android:id="@+id/step3Arrow"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_media_play"
+                            app:tint="#777777"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="Flecha paso 3"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/step3Detalle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Coloca las manos en el centro del pecho y presiona fuerte y rápido (100-120 por minuto)."
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        android:paddingTop="8dp" />
+                </LinearLayout>
+
+                <!-- Paso 4 -->
+                <LinearLayout
+                    android:id="@+id/paso4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/step4Icon"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@android:drawable/ic_menu_info_details"
+                            app:tint="#4BBDB2"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="Icono paso 4" />
+
+                        <TextView
+                            android:id="@+id/step4Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4. Realiza ventilaciones de rescate si sabes cómo."
+                            android:textSize="16sp"
+                            android:textColor="#000000"
+                            android:layout_toEndOf="@id/step4Icon"
+                            android:layout_marginStart="12dp"
+                            android:layout_alignParentTop="true"/>
+
+                        <ImageView
+                            android:id="@+id/step4Arrow"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_media_play"
+                            app:tint="#777777"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="Flecha paso 4"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/step4Detalle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Haz 30 compresiones por cada 2 ventilaciones boca a boca."
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        android:paddingTop="8dp" />
+                </LinearLayout>
+
+                <!-- Paso 5 -->
+                <LinearLayout
+                    android:id="@+id/paso5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/step5Icon"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@android:drawable/ic_menu_agenda"
+                            app:tint="#4BBDB2"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="Icono paso 5" />
+
+                        <TextView
+                            android:id="@+id/step5Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5. Continúa hasta ayuda o signos de vida."
+                            android:textSize="16sp"
+                            android:textColor="#000000"
+                            android:layout_toEndOf="@id/step5Icon"
+                            android:layout_marginStart="12dp"
+                            android:layout_alignParentTop="true"/>
+
+                        <ImageView
+                            android:id="@+id/step5Arrow"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_media_play"
+                            app:tint="#777777"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="Flecha paso 5"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/step5Detalle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No pares hasta que llegue ayuda o la persona recupere signos vitales."
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        android:paddingTop="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Barra de navegación inferior -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:weightSum="5"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <!-- Botón home -->
+        <LinearLayout
+            android:id="@+id/homeButtonLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="Home"
+                android:src="@android:drawable/ic_menu_compass"
+                app:tint="#517CF4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="#517CF4"
+                android:textSize="12sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Botón search -->
+        <LinearLayout
+            android:id="@+id/searchButtonLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@android:drawable/ic_menu_search"
+                app:tint="#517CF4"
+                android:contentDescription="Search" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:textColor="#517CF4"
+                android:textSize="12sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Botón emergencia -->
+        <LinearLayout
+            android:id="@+id/emergencyButtonLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:backgroundTint="#EF4444"
+                android:src="@android:drawable/ic_menu_call"
+                app:tint="#FFFFFF"
+                android:background="@android:color/transparent"
+                android:contentDescription="Emergencia"
+                android:elevation="6dp"/>
+        </LinearLayout>
+
+        <!-- Botón favorites -->
+        <LinearLayout
+            android:id="@+id/favoritesButtonLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@android:drawable/ic_menu_gallery"
+                app:tint="#517CF4"
+                android:contentDescription="Favorites" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorites"
+                android:textColor="#517CF4"
+                android:textSize="12sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Botón profile -->
+        <LinearLayout
+            android:id="@+id/profileButtonLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@android:drawable/ic_menu_manage"
+                app:tint="#517CF4"
+                android:contentDescription="Profile" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="#517CF4"
+                android:textSize="12sp"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
