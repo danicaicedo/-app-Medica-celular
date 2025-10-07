@@ -275,7 +275,7 @@
                 android:layout_height="24dp"
                 android:contentDescription="Home"
                 android:src="@android:drawable/ic_menu_compass"
-                android:tint="#6DA9E5" />
+                app:tint="#6DA9E5"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -298,7 +298,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@android:drawable/ic_menu_search"
-                android:tint="#6DA9E5" />
+                app:tint="#6DA9E5"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -321,7 +321,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@android:drawable/ic_menu_call"
-                android:tint="#6DA9E5" />
+                app:tint="#6DA9E5"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -344,7 +344,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@android:drawable/ic_menu_gallery"
-                android:tint="#6DA9E5" />
+                app:tint="#6DA9E5"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -367,7 +367,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@android:drawable/ic_menu_manage"
-                android:tint="#6DA9E5" />
+                app:tint="#6DA9E5"/>
 
             <TextView
                 android:layout_width="wrap_content"
