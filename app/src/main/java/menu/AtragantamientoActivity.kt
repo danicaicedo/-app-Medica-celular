@@ -4,12 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.aristidevs.finalmente.R
-import com.aristidevs.finalmente.MainActivity
+import com.aristidevs.finalmente.MenuActivity
 
 class AtragantamientoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +24,7 @@ class AtragantamientoActivity : AppCompatActivity() {
         // === BOTÓN HOME: ir al menú principal ===
         val btnHome = findViewById<LinearLayout>(R.id.homeButtonLayout)
         btnHome.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MenuActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
             startActivity(intent)
             finish() // Opcional: cerrar esta pantalla
