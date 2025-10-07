@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EB3C3C">
+
+    <!-- Título Emergencia -->
+    <TextView
+        android:id="@+id/titleEmergency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Emergencia"
+        android:textSize="28sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-medium"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <!-- Botón Emergency Now -->
+    <Button
+        android:id="@+id/btnEmergencyCall"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/titleEmergency"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Emergency Now"
+        android:textColor="#FFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:backgroundTint="#EF4444"
+        android:fontFamily="sans-serif-medium"
+        android:elevation="8dp"
+        android:gravity="center" />
+
+    <!-- Barra de búsqueda -->
+    <EditText
+        android:id="@+id/searchHelp"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@id/btnEmergencyCall"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="#FFF"
+        android:hint="Buscar ayuda..."
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:padding="14dp"
+        android:fontFamily="sans-serif" />
+
+    <!-- Botones de emergencia en cuadrícula -->
+    <GridLayout
+        android:id="@+id/gridMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchHelp"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:useDefaultMargins="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            android:backgroundTint="#B7D8FB">
+
+            <Button
+                android:id="@+id/btnCPR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="RCP"
+                android:textSize="18sp"
+                android:textColor="#FFF"
+                android:fontFamily="sans-serif-medium"
+
+                android:backgroundTint="#FFC73C"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            android:backgroundTint="#B7D8FB">
+
+            <Button
+                android:id="@+id/btnChoking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Atragantamiento"
+                android:textSize="16sp"
+                android:textColor="#FFF"
+                android:fontFamily="sans-serif-medium"
+                android:backgroundTint="#5AC45A"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            android:backgroundTint="#B7D8FB">
+
+            <Button
+                android:id="@+id/btnBleeding"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Hemorragia"
+                android:textSize="18sp"
+                android:textColor="#FFF"
+                android:fontFamily="sans-serif-medium"
+                android:backgroundTint="#2E91E5"
+
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            android:backgroundTint="#B7D8FB">
+
+            <Button
+                android:id="@+id/btnBurns"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Quemadura"
+                android:textSize="18sp"
+                android:textColor="#FFF"
+                android:fontFamily="sans-serif-medium"
+                android:backgroundTint="#3CEFA1"
+                />
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+    <!-- Menú inferior -->
+    <LinearLayout
+        android:id="@+id/bottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFF"
+        android:elevation="12dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/nav_home"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Inicio"
+            android:textColor="#517CF4"
+            android:textSize="15sp"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif-medium" />
+
+        <Button
+            android:id="@+id/nav_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Buscando"
+            android:textColor="#517CF4"
+            android:textSize="15sp"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif-medium" />
+
+        <Button
+            android:id="@+id/nav_favorites"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Favoritos"
+            android:textColor="#517CF4"
+            android:textSize="15sp"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif-medium" />
+
+        <Button
+            android:id="@+id/nav_profile"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Perfil"
+            android:textColor="#517CF4"
+            android:textSize="15sp"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+
+</RelativeLayout>
