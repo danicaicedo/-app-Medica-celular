@@ -60,7 +60,8 @@
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:src="@android:drawable/ic_menu_search"
-            android:tint="#5E5E5E"
+            app:tint="#5E5E5E"
+
             android:layout_marginStart="14dp" />
 
         <EditText
