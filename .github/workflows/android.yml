@@ -19,11 +19,11 @@ jobs:
         distribution: 'temurin'
         cache: gradle
     - name: Grant execute permission for gradlew
-      if: ${{ hashFiles('gradlew') != '' }}
       run: chmod +x gradlew
-    - name: Build with Gradle
-      if: ${{ hashFiles('build.gradle*') != '' }}
-      run: ./gradlew build
+    - name: Build debug APK
+      run: ./gradlew assembleDebug
+    - name: Verifica APK generado
+      run: ls -l app/build/outputs/apk/debug/
     - name: Upload Testing APK
       uses: actions/upload-artifact@v4
       with:
