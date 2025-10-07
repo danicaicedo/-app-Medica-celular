@@ -157,7 +157,8 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@android:drawable/ic_menu_manage"
-                        android:tint="#20CAC4" />
+                        app:tint="#20CAC4" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -181,7 +182,8 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:src="@android:drawable/ic_popup_sync"
-                        android:tint="#20CAC4" />
+                        app:tint="#20CAC4" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
