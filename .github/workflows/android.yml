@@ -19,17 +19,16 @@ jobs:
         distribution: 'temurin'
         cache: gradle
     - name: Grant execute permission for gradlew
+      if: ${{ hashFiles('gradlew') != '' }}
       run: chmod +x gradlew
-    - name: Build debug APK
-      run: ./gradlew assembleDebug
-    - name: Verifica APK generado
-      run: ls -l app/build/outputs/apk/debug/
+    - name: Build with Gradle
+      if: ${{ hashFiles('build.gradle*') != '' }}
+      run: ./gradlew build
     - name: Upload Testing APK
       uses: actions/upload-artifact@v4
       with:
         name: app-debug.apk
         path: app/build/outputs/apk/debug/app-debug.apk
-
   firebase-test-lab:
     needs: build
     runs-on: ubuntu-latest
@@ -38,9 +37,6 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: app-debug.apk
-        path: .
-    - name: Move APK to Root
-      run: mv app-debug.apk/app-debug.apk ./
     - name: Display structure of downloaded files
       run: ls -R
     - id: 'auth'
@@ -53,4 +49,5 @@ jobs:
       uses: 'google-github-actions/setup-gcloud@v2'
     - name: 'Running tests in Firebase Test Lab'
       if: ${{ hashFiles('app-debug.apk') != '' }}
+      # run: 'gcloud info'
       run: 'gcloud firebase test android run --app app-debug.apk --type robo --device model=MediumPhone.arm,version=30,locale=en,orientation=portrait'
