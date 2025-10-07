@@ -14,9 +14,9 @@
         android:theme="@style/Theme.Finalmente">
 
         <activity android:name="com.aristidevs.finalmente.menu.AtragantamientoActivity" />
-        <!-- <activity android:name="com.aristidevs.finalmente.menu.QuemaduraActivity" /> -->
+      <!-- <activity android:name="com.aristidevs.finalmente.menu.HemorragiaActivity" /> -->
+<!-- <activity android:name="com.aristidevs.finalmente.menu.QuemaduraActivity" /> -->
 
-        <activity android:name="com.aristidevs.finalmente.menu.HemorragiaActivity" />
 
 
 
