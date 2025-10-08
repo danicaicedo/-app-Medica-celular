@@ -22,13 +22,19 @@ class MenuActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnCPR).setOnClickListener {
-            val intent = Intent(this, RcpActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, RcpActivity::class.java))
         }
 
         findViewById<Button>(R.id.btnChoking).setOnClickListener {
-            val intent = Intent(this, AtragantamientoActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, AtragantamientoActivity::class.java))
+        }
+
+        findViewById<Button>(R.id.btnBleeding).setOnClickListener {
+            startActivity(Intent(this, HemorragiaActivity::class.java))
+        }
+
+        findViewById<Button>(R.id.btnBurns).setOnClickListener {
+            startActivity(Intent(this, QuemaduraActivity::class.java))
         }
     }
 }
