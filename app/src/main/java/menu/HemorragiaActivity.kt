@@ -7,6 +7,6 @@ import com.aristidevs.finalmente.R
 class HemorragiaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hemorragia)
+        setContentView(R.layout.hemorragia)  // <- Aquí el layout sin "activity_"
     }
 }
