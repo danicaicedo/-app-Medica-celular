@@ -7,6 +7,6 @@ import com.aristidevs.finalmente.R
 class QuemaduraActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quemadura)
+        setContentView(R.layout.quemadura)  // <- Aquí el layout sin "activity_"
     }
 }
