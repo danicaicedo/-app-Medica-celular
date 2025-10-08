@@ -1,4 +1,12 @@
-package menu
+package com.aristidevs.finalmente.menu
 
-class HemorragiaActivity {
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.aristidevs.finalmente.R
+
+class HemorragiaActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_hemorragia)
+    }
 }
