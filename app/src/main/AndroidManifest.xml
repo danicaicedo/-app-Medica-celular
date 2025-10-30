@@ -27,7 +27,7 @@
         <activity android:name="com.aristidevs.finalmente.menu.ProfileActivity" />
 
         <activity android:name="com.aristidevs.finalmente.menu.MapaActivity" />
-        <activity android:name="com.aristidevs.finalmente.menu.BienvenidaActivity" />
+       
 
 
 
