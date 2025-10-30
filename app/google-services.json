@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "562400915645",
+    "project_id": "app-medica-b86fc",
+    "storage_bucket": "app-medica-b86fc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562400915645:android:2f788d319a95ddda3007d4",
+        "android_client_info": {
+          "package_name": "com.aristidevs.finalmente"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562400915645-eiid8kuvc0g6ed2avlau7j9ff4msubmq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aristidevs.finalmente",
+            "certificate_hash": "20c06e48ece32a5ba71252c1b476d29400c57d46"
+          }
+        },
+        {
+          "client_id": "562400915645-6h5va9n1j61dnvig4vp8i7s4cno0cp77.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9Cj-U_FaZ2WkATBmcJTe469fJU0r_7wU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562400915645-6h5va9n1j61dnvig4vp8i7s4cno0cp77.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

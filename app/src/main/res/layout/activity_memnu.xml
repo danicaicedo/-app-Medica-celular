@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6FAFF">
+
+    <!-- Emergency Now button -->
+
+    <!-- Search Box -->
+
+    <Button
+        android:id="@+id/btnEmergencyCall"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#EF4444"
+        android:elevation="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Emergency Now"
+        android:textColor="#FFF"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/searchHelp"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@id/btnEmergencyCall"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Search for help..."
+        android:background="#FFF"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:fontFamily="sans-serif" />
+
+    <!-- Emergency Category Buttons with Icons -->
+    <GridLayout
+        android:id="@+id/gridMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchHelp"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:alignmentMode="alignMargins"
+        android:useDefaultMargins="true">
+
+        <!-- RCP -->
+        <LinearLayout
+            android:id="@+id/cardCPR"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_columnWeight="1"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="12dp"
+            android:backgroundTint="#B7D8FB">
+
+            <ImageView
+                android:id="@+id/imgCPR"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:src="@drawable/rcp"
+                android:contentDescription="RCP" />
+
+            <TextView
+                android:id="@+id/txtCPR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="RCP"
+                android:textColor="#222"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Atragantamiento -->
+        <LinearLayout
+            android:id="@+id/cardChoking"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_columnWeight="1"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="12dp"
+            android:backgroundTint="#B7D8FB">
+
+            <ImageView
+                android:id="@+id/imgChoking"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:src="@drawable/atragantamiento"
+                android:contentDescription="Atragantamiento" />
+
+            <TextView
+                android:id="@+id/txtChoking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Atragantamiento"
+                android:textSize="16sp"
+                android:textColor="#222"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- Hemorragia -->
+        <LinearLayout
+            android:id="@+id/cardBleeding"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_columnWeight="1"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="12dp"
+            android:backgroundTint="#FDEAEA">
+
+            <ImageView
+                android:id="@+id/imgBleeding"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:src="@drawable/hemorragia1"
+                android:contentDescription="Hemorragia" />
+
+            <TextView
+                android:id="@+id/txtBleeding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hemorragia"
+                android:textSize="16sp"
+                android:textColor="#222"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- Quemadura -->
+        <LinearLayout
+            android:id="@+id/cardBurns"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_columnWeight="1"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="12dp"
+            android:backgroundTint="#FDE2BA">
+
+            <ImageView
+                android:id="@+id/imgBurns"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:src="@drawable/quemadura1"
+                android:contentDescription="Quemadura" />
+
+            <TextView
+                android:id="@+id/txtBurns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quemadura"
+                android:textSize="16sp"
+                android:textColor="#222"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"/>
+        </LinearLayout>
+    </GridLayout>
+
+    <!-- Barra de navegación inferior -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:weightSum="5"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/homeButtonLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="Home"
+                android:src="@android:drawable/ic_menu_compass"
+                app:tint="#517CF4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="#517CF4"
+                android:textSize="12sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:contentDescription="Search"
+                android:src="@android:drawable/ic_menu_search"
+                app:tint="#517CF4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:textColor="#517CF4"
+                android:textSize="12sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/emergencyButtonLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:backgroundTint="#EF4444"
+                android:src="@android:drawable/ic_menu_call"
+                app:tint="#FFFFFF"
+                android:background="@android:color/transparent"
+                android:contentDescription="Emergencia"
+                android:elevation="6dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/MapaButtonLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="28dp"
+                android:contentDescription="Mapa"
+                android:src="@android:drawable/ic_menu_gallery"
+                app:tint="#517CF4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mapa"
+                android:textColor="#517CF4"
+                android:textSize="12sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profileButtonLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="Profile"
+                android:src="@android:drawable/ic_menu_manage"
+                app:tint="#517CF4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="#517CF4"
+                android:textSize="12sp"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
