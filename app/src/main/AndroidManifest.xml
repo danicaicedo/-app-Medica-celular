@@ -22,12 +22,12 @@
         <activity android:name="com.aristidevs.finalmente.menu.AtragantamientoActivity" />
         <activity android:name="com.aristidevs.finalmente.menu.HemorragiaActivity" />
         <activity android:name="com.aristidevs.finalmente.menu.QuemaduraActivity" />
-       
+        <activity android:name="com.aristidevs.finalmente.menu.BusquedaActivity" />
 
         <activity android:name="com.aristidevs.finalmente.menu.ProfileActivity" />
 
         <activity android:name="com.aristidevs.finalmente.menu.MapaActivity" />
-       
+
 
 
 
