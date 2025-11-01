@@ -62,6 +62,24 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+          findViewById<LinearLayout>(R.id.homeButtonLayout).setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
+            finish() // Opcional, para cerrar la pantalla actual
+        }
+
+        findViewById<LinearLayout>(R.id.cardSearch).setOnClickListener {
+            // Ya en la actividad de búsqueda, puedes dejarlo o mantenerlo para recargar
+            startActivity(Intent(this, BusquedaActivity::class.java))
+        }
+
+
+
+        findViewById<LinearLayout>(R.id.profileButtonLayout).setOnClickListener {
+            // Ajusta a tu actividad de perfil
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
         findViewById<LinearLayout>(R.id.searchButtonLayout).setOnClickListener {
             val intent = Intent(this, BusquedaActivity::class.java) // <--- el nombre correcto
             startActivity(intent)
