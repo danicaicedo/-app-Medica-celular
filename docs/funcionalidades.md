@@ -12,6 +12,6 @@ La siguientes es una lista de las funcionalidades disponibles para el usuario de
 
 5.Botón de llamada de emergencia: acceso directo a los números locales de urgencias.
 
-6.Categorías de emergencias: organización por temas (respiratorias, cardíacas, traumatismos, quemaduras, etc.) para navegar fácilmente.
+6.Agregar campo para busqueda, que el usuario pueda buscar las tarjetas "ahogamiento, quemadura, rcp.." rapidamente.
 
 7.que el usuario pueda iniciar sesion y registrarse.
