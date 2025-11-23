@@ -6,7 +6,7 @@ La siguientes es una lista de las funcionalidades disponibles para el usuario de
 
 2.Guías paso a paso: instrucciones claras y concisas para atender la emergencia hasta que llegue ayuda profesional.
 
-3.Videos explicativos: material audiovisual breve y sencillo que muestra cómo realizar maniobras de primeros auxilios.
+3.mapas para mostrar hospitales cercanos.
 
 4.Modo offline: acceso a la información sin necesidad de conexión a internet, útil en zonas con poca cobertura.
 
@@ -14,4 +14,4 @@ La siguientes es una lista de las funcionalidades disponibles para el usuario de
 
 6.Categorías de emergencias: organización por temas (respiratorias, cardíacas, traumatismos, quemaduras, etc.) para navegar fácilmente.
 
-7.Favoritos y guardados: posibilidad de marcar guías como favoritas para acceder rápido en situaciones críticas.
+7.que el usuario pueda iniciar sesion y registrarse.
