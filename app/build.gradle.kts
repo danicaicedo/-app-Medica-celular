@@ -49,7 +49,7 @@ dependencies {
     
 
     // Firebase y Google Sign-In (versión más reciente)
-    implementation(platform("com.google.firebase:firebase-bom:34.4.0"))
+    implementation(platform("com.google.firebase:firebase-bom:34.5.0"))
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.android.gms:play-services-auth:21.3.0")
     implementation("com.google.android.gms:play-services-maps:18.2.0")
